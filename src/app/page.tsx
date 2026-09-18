@@ -1,6 +1,4 @@
-//
 import Image from "next/image"
-import styles from "./page.module.css"
 import { auth, login, logout } from "./actions"
 
 export default async function Home() {
