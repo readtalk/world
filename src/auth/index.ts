@@ -8,7 +8,7 @@ import { PasswordUI } from "@openauthjs/openauth/ui/password"
 import { subjects } from "./subjects"
 
 export default {
-  fetch(request: Request, env: Env, ctx: ExecutionContext) {
+  fetch(request: Request, env: CloudflareEnv, ctx: ExecutionContext) {
     return issuer({
       storage: CloudflareStorage({
         namespace: env.AUTH_KV as CloudflareStorageOptions["namespace"],
@@ -30,9 +30,9 @@ export default {
       },
     }).fetch(request, env, ctx)
   },
-} satisfies ExportedHandler<Env>
+} satisfies ExportedHandler<CloudflareEnv>
 
-async function getOrCreateUser(env: Env, email: string): Promise<string> {
+async function getOrCreateUser(env: CloudflareEnv, email: string): Promise<string> {
   const result = await env.AUTH_DB.prepare(
     `INSERT INTO user (email) VALUES (?)
      ON CONFLICT (email) DO UPDATE SET email = email
