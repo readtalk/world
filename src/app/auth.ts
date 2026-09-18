@@ -1,6 +1,6 @@
-//
 import { createClient } from "@openauthjs/openauth/client"
 import { cookies as getCookies } from "next/headers"
+export { subjects } from "../auth/subjects"
 
 export const client = createClient({
   clientID: "world",
