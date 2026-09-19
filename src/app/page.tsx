@@ -1,3 +1,4 @@
+//
 import { auth, login, logout } from "./actions";
 
 export default async function Home() {
