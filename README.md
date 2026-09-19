@@ -47,8 +47,7 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 ```
 root/
 ├── .vscode/
-│   ├── 
-│   └── 
+│   └── settings.json
 ├── public/
 │   ├── _headers
 │   ├── file.svg
