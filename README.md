@@ -44,6 +44,35 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
+```
+root/
+├── .vscode/
+│   ├── 
+│   └── 
+├── public/
+│   ├── _headers
+│   ├── file.svg
+│   ├── globe.svg
+│   ├── next.svg
+│   └── window.svg
+├── src/
+│   └── app/                         ← Next.js App Router
+│       ├── favicon.ico
+│       ├── globals.css
+│       ├── layout.tsx
+│       └── page.tsx
+├── .gitignore
+├── README.md
+├── env.d.ts
+├── eslint.config.mjs
+├── next.config.ts
+├── open-next.config.ts
+├── package.json
+├── postcss.config.mjs
+├── tsconfig.json
+└── wrangler.jsonc
+```
+
 ## Deploying To Production
 
 | Command                           | Action                                       |
